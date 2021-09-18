@@ -1,26 +1,35 @@
 from flask import render_template,request,redirect,url_for,abort
 from . import main
-from ..models import User
-from flask_login import login_required
+from ..models import User,Pitch
+from flask_login import login_required,current_user
 from .. import db,photos
 import markdown2  
-from .forms import  UpdateProfile
+from .forms import  UpdateProfile,PitchForm
 
 
 # Views
 
+
+
 @main.route('/')
 @login_required
-def index():
 
+def index():
 
     '''
     View movie page function that returns the movie details page and its data
-    
-    '''
-    
 
-    return render_template('index.html')
+    '''
+    pitches = Pitch.query.all()
+    Technology = Pitch.query.filter_by(category='Experince').all()
+    Famous = Pitch.query.filter_by(category='Technology').all()
+    Education = Pitch.query.filter_by(category='Education').all()
+    Humour = Pitch.query.filter_by(category='Humour').all()
+    Intelligence = Pitch.query.filter_by(category='Intelligence').all()
+
+
+    return render_template('index.html',pitches = pitches,Technology = Technology,Famous = Famous,Education = Education,Humour = Humour , Intelligence = Intelligence  )  
+
 
 
 @main.route('/user/<uname>')
@@ -62,3 +71,25 @@ def update_pic(uname):
         user.profile_pic_path = path
         db.session.commit()
     return redirect(url_for('main.profile',uname = uname))
+
+
+
+
+@main.route('/pitch/new',methods = ['GET','POST'])
+@login_required
+def new_pitch():
+  form = PitchForm()
+
+  if form.validate_on_submit():
+    title=form.title.data
+    category = form.category.data
+    pitch = form.pitch.data
+    new_pitch = Pitch(title=title,category=category,pitch=pitch,user=current_user)
+
+    db.session.add(new_pitch)
+    db.session.commit()
+
+    return redirect(url_for('.index',id = new_pitch.id))
+
+  return render_template('create_pitch.html',title='Add Your Pitch',pitch_form=form)
+
