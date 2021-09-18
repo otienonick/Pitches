@@ -1,1 +1,48 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
+
+.card{
+    transition: all .3s;
+}
+
+.card:hover{
+    transform: scale(1.01);
+    box-shadow: 0 4px 17px rgba(0,0,0,0.45);
+}
+
+
+i{
+    font-size: 1.5rem;
+    cursor: pointer;
+
+}
+body{
+    background: #F3FAF0;
+}
+
+
+.finish{
+    background: #212529;
+    color: #fff;
+}
+.follow i{
+    padding: 0 10px;
+    font-size: 1.5rem;
+    color: #fff;
+}
+.tweet:hover{
+    color:rgba(29,161,242,1.00);
+}
+.fb:hover{
+    color: #385898;;
+}
+.ig:hover{
+    color:#d03b5c;
+}
+.contact p:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.no_deco{
+    text-decoration: none;
+}
+
