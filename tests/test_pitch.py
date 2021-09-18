@@ -2,7 +2,7 @@ import unittest
 from app.models import User,Pitch
 from app import db
 
-class TestReview(unittest.TestCase):
+class TestPitch(unittest.TestCase):
 
     def setUp(self):
         self.user_James = User(username = 'James',password = 'potato', email = 'james@ms.com')
