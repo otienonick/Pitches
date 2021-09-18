@@ -2,14 +2,9 @@ from flask import render_template,redirect,url_for,flash,request
 from . import auth
 from ..models import User
 from .forms import RegistrationForm,LoginForm
-
-
 from .. import db
 from flask_login import login_user,login_required,logout_user
 from ..email import mail_message
-
-
-
 
 # Views
 
@@ -17,16 +12,12 @@ from ..email import mail_message
 @login_required
 def index():
 
-
     '''
     View movie page function that returns the movie details page and its data
     
     '''
     
-
     return render_template('index.html')
-
-
 
 @auth.route('/login',methods=['GET','POST'])
 def login():
