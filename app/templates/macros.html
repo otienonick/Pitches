@@ -1,0 +1,14 @@
+{% macro displayPitches(pitch_list) %}
+
+    {% for pitch in pitch_list %}
+
+    <div class="card text-white bg-dark mb-3">
+        <div class="card-header"><h5>{{pitch.name}}</h5></div>
+        <div class="card-body">
+          <p class="card-text">{{pitch.pitch}}.</p>
+        </div>
+      </div>
+   
+
+    {% endfor %}
+{% endmacro %}

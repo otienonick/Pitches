@@ -34,42 +34,227 @@
 {%endif%}
 
 
-<h3 class="text-center">Experience</h3>
-{%for pitch in Experience%}
-<h4>{{pitch.title}}</h4>
-<p >{{pitch.pitch}}</p>
+<div class="container">
+    <h3 class="text-center"><ins>Experience Pitches</ins></h3>
+   
+    <div class="row row-cols-2 row-cols-sm-1 row-cols-md-2  row-cols-lg-3 g-2 g-lg-3">
+      
+        <div class="col">
+            <div class="card text-white bg-dark mb-3" >
+                <div class="card-header"><h5>Vince Lombardi</div>
+                <div class="card-body">
+                  <p class="card-text">Practice does not make perfect. Only perfect practice makes perfect.</p>
+                </div>
+        </div>
+        </div>
 
-{% endfor%}
+        <div class="col">
+            <div class="card text-white bg-dark mb-3" >
+                <div class="card-header"><h5>Auguste Rodin</div>
+                <div class="card-body">
+                  <p class="card-text">Nothing is a waste of time if you use the experience wisely.</p>
+                </div>
+        </div>
+           
+        </div>
+
+        <div class="col">
+            <div class="card text-white bg-dark mb-3" >
+                <div class="card-header"><h5>Agnetha Faltskog</div>
+                <div class="card-body">
+                  <p class="card-text">My path has not been determined. I shall have more experiences and pass many more milestones.</p>
+                </div>
+        </div>
+         
+        </div>
+
+        </div>
+        <div class="col-4">
+            {{ macro.displayPitches(Experience)}}
+        
+    </div>
+        </div>
+    
 
 
-<h3 class="text-center">Technology</h3>
-{%for pitch in Technology%}
-<h4>{{pitch.title}}</h4>
-<p >{{pitch.pitch}}</p>
 
-{% endfor%}
+<div class="container">
+    <h3 class="text-center"><ins>Education Pitches</ins></h3>
+   
+    <div class="row row-cols-2 row-cols-sm-1 row-cols-md-2  row-cols-lg-3 g-2 g-lg-3">
+      
+        <div class="col">
+            <div class="card text-white bg-dark mb-3" >
+                <div class="card-header"><h5>Aristotle</div>
+                <div class="card-body">
+                  <p class="card-text">It is the mark of an educated mind to be able to entertain a thought without accepting it.</p>
+                </div>
+        </div>
+        </div>
 
-<h3 class="text-center">Education</h3>
-{%for pitch in Education%}
-<h4>{{pitch.title}}</h4>
-<p >{{pitch.pitch}}</p>
+        <div class="col">
+            <div class="card text-white bg-dark mb-3" >
+                <div class="card-header"><h5>Maimonides</div>
+                <div class="card-body">
+                  <p class="card-text">Give a man a fish and you feed him for a day; teach a man to fish and you feed him for a lifetime.</p>
+                </div>
+        </div>
+           
+        </div>
 
-{% endfor%}
+        <div class="col">
+            <div class="card text-white bg-dark mb-3" >
+                <div class="card-header"><h5>Benjamin Franklin</div>
+                <div class="card-body">
+                  <p class="card-text">An investment in knowledge pays the best interest.
 
-<h3 class="text-center">Humour</h3>
-{%for pitch in Humour%}
-<h4>{{pitch.title}}</h4>
-<p >{{pitch.pitch}}</p>
+                </p>
+                </div>
+        </div>
+         
+        </div>
 
-{% endfor%}
+        </div>
+        <div class="col-4">
+            {{ macro.displayPitches(Education)}}
+        
+    </div>
+        </div>
 
-<h3 class="text-center">Intelligence</h3>
-{%for pitch in Intelligence%}
-<h4>{{pitch.title}}</h4>
-<p >{{pitch.pitch}}</p>
-
-{% endfor%}
+                
 
 
+
+
+
+<div class="container">
+    <h3 class="text-center"><ins>Technology Pitches</ins></h3>
+   
+    <div class="row row-cols-2 row-cols-sm-1 row-cols-md-2  row-cols-lg-3 g-2 g-lg-3">
+      
+        <div class="col">
+            <div class="card text-white bg-dark mb-3" >
+                <div class="card-header"><h5>Bill Gates</div>
+                <div class="card-body">
+                  <p class="card-text">Technology is just a tool. In terms of getting the kids working together and motivating them, the teacher is the most important.</p>
+                </div>
+        </div>
+        </div>
+
+        <div class="col">
+            <div class="card text-white bg-dark mb-3" >
+                <div class="card-header"><h5>Mitch Kapor</div>
+                <div class="card-body">
+                  <p class="card-text">Getting information off the Internet is like taking a drink from a fire hydrant.</p>
+                </div>
+        </div>
+           
+        </div>
+
+        <div class="col">
+            <div class="card text-white bg-dark mb-3" >
+                <div class="card-header"><h5>R. Buckminster Fuller</div>
+                <div class="card-body">
+                  <p class="card-text">Humanity is acquiring all the right technology for all the wrong reasons.</p>
+                </div>
+        </div>
+         
+        </div>
+
+        </div>
+        <div class="col-4">
+            {{ macro.displayPitches(Technology)}}
+        
+    </div>
+        </div>
+
+
+      
+
+
+<div class="container">
+    <h3 class="text-center"><ins>Humour Pitches</ins></h3>
+   
+    <div class="row row-cols-2 row-cols-sm-1 row-cols-md-2  row-cols-lg-3 g-2 g-lg-3">
+      
+        <div class="col">
+            <div class="card text-white bg-dark mb-3" >
+                <div class="card-header"><h5>Erma Bombeck</div>
+                <div class="card-body">
+                  <p class="card-text">There is a thin line that separates laughter and pain, comedy and tragedy, humor and hurt.</p>
+                </div>
+        </div>
+        </div>
+
+        <div class="col">
+            <div class="card text-white bg-dark mb-3" >
+                <div class="card-header"><h5>Clive James</div>
+                <div class="card-body">
+                  <p class="card-text">Common sense and a sense of humor are the same thing, moving at different speeds. A sense of humor is just common sense, dancing.</p>
+                </div>
+        </div>
+           
+        </div>
+
+        <div class="col">
+            <div class="card text-white bg-dark mb-3" >
+                <div class="card-header"><h5>Steven Wright</div>
+                <div class="card-body">
+                  <p class="card-text">Everywhere is within walking distance if you have the time.</p>
+                </div>
+        </div>
+         
+        </div>
+
+        </div>
+        <div class="col-4">
+            {{ macro.displayPitches(Humour)}}
+        
+    </div>
+        </div>
+  
+
+
+
+<div class="container">
+    <h3 class="text-center"><ins>Intelligence Pitches</ins></h3>
+   
+    <div class="row row-cols-2 row-cols-sm-1 row-cols-md-2  row-cols-lg-3 g-2 g-lg-3">
+      
+        <div class="col">
+            <div class="card text-white bg-dark mb-3" >
+                <div class="card-header"><h5>Plutarch</div>
+                <div class="card-body">
+                  <p class="card-text">The mind is not a vessel to be filled but a fire to be kindled.</p>
+                </div>
+        </div>
+        </div>
+
+        <div class="col">
+            <div class="card text-white bg-dark mb-3" >
+                <div class="card-header"><h5>Roger Ebert</div>
+                <div class="card-body">
+                  <p class="card-text">Your intellect may be confused, but your emotions will never lie to you.</p>
+                </div>
+        </div>
+           
+        </div>
+
+        <div class="col">
+            <div class="card text-white bg-dark mb-3" >
+                <div class="card-header"><h5>Marya Mannes</div>
+                <div class="card-body">
+                  <p class="card-text">The sign of an intelligent people is their ability to control their emotions by the application of reason.</p>
+                </div>
+        </div>
+         
+        </div>
+
+        </div>
+        <div class="col-4">
+            {{ macro.displayPitches(Intelligence)}}
+        
+    </div>
+        </div>
 
 {%endblock%}
