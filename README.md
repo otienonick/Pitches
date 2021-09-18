@@ -27,9 +27,15 @@
 
 ### LICENCE
 
-<img src="README_ASSETS/nunber1.png">
-<img src="README_ASSETS/number2.png">
-<img src="README_ASSETS/number3.png">
+<img src="app/static/photos/number1.png">
+<img src="app/static/photos/number2.png">
+<img src="app/static/photos/number3.png">
+<img src="app/static/photos/number4.png">
+<img src="app/static/photos/number5.png">
+<img src="app/static/photos/number6.png">
+<img src="app/static/photos/number7.png">
+
+
 
 #### Email :otienonick70@gmail.com
 #### &copy;2021 Nick Otieno.
