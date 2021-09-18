@@ -21,14 +21,14 @@ def index():
 
     '''
     pitches = Pitch.query.all()
-    Technology = Pitch.query.filter_by(category='Experince').all()
-    Famous = Pitch.query.filter_by(category='Technology').all()
+    Experience = Pitch.query.filter_by(category='Experience').all()
+    Technology = Pitch.query.filter_by(category='Technology').all()
     Education = Pitch.query.filter_by(category='Education').all()
     Humour = Pitch.query.filter_by(category='Humour').all()
     Intelligence = Pitch.query.filter_by(category='Intelligence').all()
 
 
-    return render_template('index.html',pitches = pitches,Technology = Technology,Famous = Famous,Education = Education,Humour = Humour , Intelligence = Intelligence  )  
+    return render_template('index.html',pitches = pitches,Experience = Experience ,Technology = Technology,Education = Education,Humour = Humour , Intelligence = Intelligence  )  
 
 
 
@@ -81,15 +81,15 @@ def new_pitch():
   form = PitchForm()
 
   if form.validate_on_submit():
-    title=form.title.data
+    name=form.author.data
     category = form.category.data
     pitch = form.pitch.data
-    new_pitch = Pitch(title=title,category=category,pitch=pitch,user=current_user)
+    new_pitch = Pitch(name = name,category = category,pitch = pitch,user = current_user)
 
     db.session.add(new_pitch)
     db.session.commit()
 
     return redirect(url_for('.index',id = new_pitch.id))
 
-  return render_template('create_pitch.html',title='Add Your Pitch',pitch_form=form)
+  return render_template('create_pitch.html',title='Add Your Pitch',pitch_form = form)
 
