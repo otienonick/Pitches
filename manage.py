@@ -6,7 +6,7 @@ from app.models import User,Role,Comment,Pitch
 
 # creating app instance
 # app = create_app('production')
-app = create_app('test')
+app = create_app('production')
 
 
 
