@@ -8,6 +8,9 @@
         <div class="card-body">
           <p class="card-text">{{pitch.pitch}}.</p>
         </div>
+      <span class="mb-2"> <i id="upvote" onclick="upvote()" class=" mx-2 bi bi-hand-thumbs-up-fill">0</i>
+        <i id="downvote" onclick="downvote()"  class=" mx-2 bi bi-hand-thumbs-down-fill">0</i></span>
+
         <a href="/comments/{{pitch.id}}" class="btn btn-outline-light btn-sm">Comments</a>
       </div>
       </div>
