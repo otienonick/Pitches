@@ -12,7 +12,6 @@ from .forms import  UpdateProfile,PitchForm,CommentForm
 
 
 @main.route('/')
-@login_required
 
 def index():
 
@@ -95,6 +94,7 @@ def new_pitch():
 
 
 @main.route('/comments/<int:id>',methods=['GET','POST'])
+@login_required
 def comment(id):
   comment = CommentForm()
   pitch=Pitch.query.get(id)
