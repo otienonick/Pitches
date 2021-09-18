@@ -26,11 +26,14 @@ def login():
         user = User.query.filter_by(email = login_form.email.data).first()
         if user is not None and user.verify_password(login_form.password.data):
             login_user(user,login_form.remember.data)
+            flash('Logged in  succesfully')   
+
+
             return redirect(request.args.get('next') or url_for('main.index'))
 
         flash('Invalid username or Password')
 
-    title = "watchlist login"
+    title = "Pitches_Hub login"
     return render_template('auth/login.html',login_form = login_form,title=title)
 
     
