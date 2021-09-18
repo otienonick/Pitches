@@ -11,7 +11,6 @@ class Config:
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     UPLOADED_PHOTOS_DEST ='app/static/photos'
     SECRET_KEY='nickson00841999code'
-    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
 
 
    
