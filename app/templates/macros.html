@@ -1,6 +1,7 @@
 {% macro displayPitches(pitch_list) %}
 
     {% for pitch in pitch_list %}
+    <div class="col-xs-12 col-sm-4 col-md-2 col-lg-6">
 
     <div class="card text-white bg-dark mb-3">
         <div class="card-header"><h5>{{pitch.name}}</h5></div>
@@ -8,9 +9,8 @@
           <p class="card-text">{{pitch.pitch}}.</p>
         </div>
         <a href="/comments/{{pitch.id}}" class="btn btn-outline-light btn-sm">Comments</a>
-
       </div>
-   
+      </div>
 
     {% endfor %}
 

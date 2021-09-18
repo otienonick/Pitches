@@ -34,76 +34,36 @@
 <h1>Hello stranger</h1>
 {%endif%}
 
+<h3 class="text-center mb-3"><ins>Experience Pitches</ins></h3>
 
-<div class="container">
-    <h3 class="text-center"><ins>Experience Pitches</ins></h3>
-  
-        <div class="col-4">
-            {{ macro.displayPitches(Experience)}}
-
-            <div class="col-md-8" id="post-section">
-      {% for post in comments%}
-      
-      <div class="card peach-gradient color-block mb-3 mx-auto z-depth-1 post-card">
-        <h4 class="card-title">{{pitch.title}}</h4>
-        <p class="card-body">" ...{{post.comment}} "</p>
-        <p class="card-footer"><b>{{user.username}}</b>'s pitch</p>
-      </div>  
-      
-      {% endfor %}
-        
+<div class="container ">
+        <div class="col">
+           <ul> {{ macro.displayPitches(Experience)}}</ul>
     </div>
-        
-    </div>
+ 
     </div>
     
 
 
 
 <div class="container">
-    <h3 class="text-center"><ins>Education Pitches</ins></h3>
+    <h3 class="text-center  mb-3"><ins>Education Pitches</ins></h3>
    
     
-        <div class="col-4">
+        <div class="col">
             {{ macro.displayPitches(Education)}}
 
-    
-    <div class="col-md-8" id="post-section">
-      {% for post in comments%}
-      
-      <div class="card peach-gradient color-block mb-3 mx-auto z-depth-1 post-card">
-        <h4 class="card-title">{{pitch.title}}</h4>
-        <p class="card-body">" ...{{post.comment}} "</p>
-        <p class="card-footer"><b>{{user.username}}</b>'s pitch</p>
-      </div>  
-      
-      {% endfor %}
-        
-    </div>
         </div>
         </div>
 
 
 
 <div class="container">
-    <h3 class="text-center"><ins>Technology Pitches</ins></h3>
+    <h3 class="text-center mb-3"><ins>Technology Pitches</ins></h3>
    
  
-        <div class="col-4">
+        <div class="col">
             {{ macro.displayPitches(Technology)}}
-            <div class="col-md-8" id="post-section">
-      {% for post in comments%}
-      
-      <div class="card peach-gradient color-block mb-3 mx-auto z-depth-1 post-card">
-        <h4 class="card-title">{{pitch.title}}</h4>
-        <p class="card-body">" ...{{post.comment}} "</p>
-        <p class="card-footer"><b>{{user.username}}</b>'s pitch</p>
-      </div>  
-      
-      {% endfor %}
-        
-    </div>
-        
     </div>
         </div>
 
@@ -114,20 +74,9 @@
 <div class="container">
     <h3 class="text-center"><ins>Humour Pitches</ins></h3>
   
-        <div class="col-4">
+        <div class="col">
             {{ macro.displayPitches(Humour)}}
-            <div class="col-md-8" id="post-section">
-      {% for post in comments%}
-      
-      <div class="card peach-gradient color-block mb-3 mx-auto z-depth-1 post-card">
-        <h4 class="card-title">{{pitch.title}}</h4>
-        <p class="card-body">" ...{{post.comment}} "</p>
-        <p class="card-footer"><b>{{user.username}}</b>'s pitch</p>
-      </div>  
-      
-      {% endfor %}
-        
-    </div>
+     
         
     </div>
         </div>
@@ -136,24 +85,11 @@
 
 
 <div class="container">
-    <h3 class="text-center"><ins>Intelligence Pitches</ins></h3>
+    <h3 class="text-center mb-3"><ins>Intelligence Pitches</ins></h3>
    
 
-        <div class="col-4">
+        <div class="col">
             {{ macro.displayPitches(Intelligence)}}
-            
-            <div class="col-md-8" id="post-section">
-      {% for post in comments%}
-      
-      <div class="card peach-gradient color-block mb-3 mx-auto z-depth-1 post-card">
-        <h4 class="card-title">{{pitch.title}}</h4>
-        <p class="card-body">" ...{{post.comment}} "</p>
-        <p class="card-footer"><b>{{user.username}}</b>'s pitch</p>
-      </div>  
-      
-      {% endfor %}
-        
-    </div>
         
     </div>
         </div>
