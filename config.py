@@ -11,7 +11,6 @@ class Config:
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     UPLOADED_PHOTOS_DEST ='app/static/photos'
     SECRET_KEY='nickson00841999code'
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://postgres:postgres@localhost/pitch_flask'
 
 
      #email configurations
@@ -23,7 +22,8 @@ class Config:
 
 
 class ProdConfig(Config):
-    
+       
+    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
 
 
     '''
@@ -32,8 +32,8 @@ class ProdConfig(Config):
     Args:
         Config: The parent configuration class with General configuration settings
     '''
+    pass
 
-    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
 
 
 class TestConfig(Config):
@@ -49,7 +49,7 @@ class DevConfig(Config):
     Args:
         Config: The parent configuration class with General configuration settings
     '''
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://postgres:postgres@localhost/pitch_flask'
+    # SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://postgres:postgres@localhost/pitch_flask'
     DEBUG = True
 
 
