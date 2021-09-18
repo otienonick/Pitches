@@ -10,13 +10,13 @@
             <a class="nav-link active" aria-current="page" href="/">Home</a>
           </li>
         </ul>
-        <ul class="nav navbar-nav navbar-right d-inline">
+        <ul class="nav navbar-nav  d-inline">
                  
             {% if current_user.is_authenticated %}
             <li><a href="/">{{current_user.username}}</a></li>
             <li><a style="text-decoration: none;color: black;" href="{{url_for('main.profile',uname = current_user.username)}}">My Profile</a></li>
             </li>
-            <li><a style="text-decoration: none;color: black;" href="#">New pitch</a>
+            <li><a style="text-decoration: none;color: black;" href="{{ url_for('main.new_pitch') }}">Create New pitch</a>
             </li>
             <li><a style="text-decoration: none;color: black;" href="{{url_for('auth.logout')}}">Sign out</a></li>
             {% else %}
