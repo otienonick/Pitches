@@ -11,6 +11,9 @@ class Config:
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     UPLOADED_PHOTOS_DEST ='app/static/photos'
     SECRET_KEY='nickson00841999code'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://postgres:postgres@localhost/pitch_flask'
+
+
      #email configurations
     MAIL_SERVER = 'smtp.googlemail.com'
     MAIL_PORT = 587
