@@ -1,4 +1,5 @@
 import os
+
 class Config:
 
     '''
@@ -22,20 +23,20 @@ class Config:
     MAIL_USERNAME = os.environ.get("MAIL_USERNAME")
     MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
 
+        # simple mde  configurations
+    SIMPLEMDE_JS_IIFE = True
+    SIMPLEMDE_USE_CDN = True
+    
+    @staticmethod
+    def init_app(app):
+        pass
+
+
 
 class ProdConfig(Config):
        
 
-
-    '''
-    Production  configuration child class
-
-    Args:
-        Config: The parent configuration class with General configuration settings
-    '''
-
     SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
-
     pass
 
 
@@ -43,6 +44,7 @@ class ProdConfig(Config):
 class TestConfig(Config):
     
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://postgres:postgres@localhost/pitch_test'
+    pass
 
 
 class DevConfig(Config):
