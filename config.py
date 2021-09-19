@@ -16,8 +16,9 @@ class Config:
     MAIL_SERVER = 'smtp.googlemail.com'
     MAIL_PORT = 587
     MAIL_USE_TLS = True
-    MAIL_USERNAME = os.environ.get("otienonick70@gmail.com")
-    MAIL_PASSWORD = os.environ.get("0718849600")
+    MAIL_USERNAME = os.environ.get("MAIL_USERNAME")
+    MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
+
 
     # simple mde  configurations
     SIMPLEMDE_JS_IIFE = True
