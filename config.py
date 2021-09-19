@@ -1,4 +1,6 @@
 import os
+import re
+
 class Config:
 
     '''
@@ -30,7 +32,11 @@ class Config:
 
 
 class ProdConfig(Config):
-    SQLALCHEMY_DATABASE_URI = os.getenv("DATABASE_URL")
+
+    SQLALCHEMY_DATABASE_URI = os.getenv("DATABASE_URL")  
+    if SQLALCHEMY_DATABASE_URI.startswith("postgres://"):
+        SQLALCHEMY_DATABASE_URI = SQLALCHEMY_DATABASE_URI.replace("postgres://", "postgresql://", 1)
+
 
 
     '''
