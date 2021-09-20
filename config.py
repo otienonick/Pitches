@@ -53,7 +53,7 @@ class DevConfig(Config):
     Args:
         Config: The parent configuration class with General configuration settings
     '''
-    SQLALCHEMY_DATABASE_URI='postgresql+psycopg2://postgres:postgres@localhost/flask_pitch'
+    SQLALCHEMY_DATABASE_URI='postgresql+psycopg2://postgres:postgres@localhost/pitch_flask'
 
     DEBUG = True
 
