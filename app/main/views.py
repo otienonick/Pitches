@@ -79,7 +79,7 @@ def new_pitch():
     name=form.author.data
     category=form.category.data
     pitch=form.pitch.data
-    new_pitch=Pitch(name=name,category=category,pitch=pitch,user=current_user._get_current_object().id)
+    new_pitch=Pitch(name=name,category=category,pitch=pitch,author=current_user._get_current_object().id)
 
     db.session.add(new_pitch)
     db.session.commit()
