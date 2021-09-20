@@ -9,3 +9,5 @@ function downvote(){
     counting++;
     document.getElementById('downvote').innerHTML = counting;
 }
+
+
