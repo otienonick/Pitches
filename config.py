@@ -9,7 +9,7 @@ class Config:
 
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     UPLOADED_PHOTOS_DEST ='app/static/photos'
-    SECRET_KEY='nickson00841999code'
+    SECRET_KEY = os.urandom(32)
 
    
     
