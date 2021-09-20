@@ -10,6 +10,8 @@ class Config:
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     UPLOADED_PHOTOS_DEST ='app/static/photos'
     SECRET_KEY = os.urandom(32)
+    SQLALCHEMY_DATABASE_URI='postgresql+psycopg2://postgres:postgres@localhost/pitch_flask'
+
 
    
     
