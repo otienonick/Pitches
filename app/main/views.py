@@ -76,10 +76,10 @@ def new_pitch():
   form=PitchForm()
 
   if form.validate_on_submit():
-    name=form.title.data
+    title=form.title.data
     category=form.category.data
     pitch=form.pitch.data
-    new_pitch=Pitch(name=name,category=category,pitch=pitch,author=current_user)
+    new_pitch=Pitch(title=title,category=category,pitch=pitch,author=current_user)
 
     db.session.add(new_pitch)
     db.session.commit()
