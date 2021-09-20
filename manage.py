@@ -8,7 +8,6 @@ from app.models import User,Role,Comment,Pitch
 app = create_app('production')
 
 
-
 migrate = Migrate(app,db)
 manager = Manager(app)
 
