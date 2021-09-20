@@ -10,7 +10,7 @@ class Config:
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     UPLOADED_PHOTOS_DEST ='app/static/photos'
     SECRET_KEY='nickson00841999code'
-    SQLALCHEMY_DATABASE_URI='postgres://ltcpvqpdvfftyr:398f815a60ea2b634c318e5d72f26056f302ee3cb3c09c46d9eb9f997abbc52a@ec2-50-17-255-244.compute-1.amazonaws.com:5432/dfsoktguk01cei'
+    SQLALCHEMY_DATABASE_URI='postgresql://ltcpvqpdvfftyr:398f815a60ea2b634c318e5d72f26056f302ee3cb3c09c46d9eb9f997abbc52a@ec2-50-17-255-244.compute-1.amazonaws.com:5432/dfsoktguk01cei'
 
    
     
@@ -54,7 +54,7 @@ class DevConfig(Config):
     Args:
         Config: The parent configuration class with General configuration settings
     '''
-    SQLALCHEMY_DATABASE_URI='postgres://ltcpvqpdvfftyr:398f815a60ea2b634c318e5d72f26056f302ee3cb3c09c46d9eb9f997abbc52a@ec2-50-17-255-244.compute-1.amazonaws.com:5432/dfsoktguk01cei'
+    SQLALCHEMY_DATABASE_URI='postgresql://ltcpvqpdvfftyr:398f815a60ea2b634c318e5d72f26056f302ee3cb3c09c46d9eb9f997abbc52a@ec2-50-17-255-244.compute-1.amazonaws.com:5432/dfsoktguk01cei'
 
 
     DEBUG = True
