@@ -15,10 +15,6 @@ from .forms import  UpdateProfile,PitchForm,CommentForm
 
 def index():
 
-    '''
-    View movie page function that returns the movie details page and its data
-
-    '''
     pitches=Pitch.query.all()
     Experience=Pitch.query.filter_by(category='Experience').all()
     Technology=Pitch.query.filter_by(category='Technology').all()
